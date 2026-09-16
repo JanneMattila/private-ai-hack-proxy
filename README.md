@@ -49,6 +49,32 @@ uv run --locked python examples/anonymous_client.py
 The Python example uses only the standard library, so it also runs with plain
 `python examples/anonymous_client.py`. The PowerShell example requires 7.2+.
 
+### A2A SDK Example
+
+[examples/anonymous_client2.py](examples/anonymous_client2.py) is an alternative
+using the official `a2a-sdk` library: `A2ACardResolver`, `ClientConfig`, `Message`,
+`Part`, and `SendMessageRequest`. It remains anonymous and uses A2A 1.0 without
+streaming. The SDK handles protocol serialization and response parsing.
+
+```powershell
+uv run examples/anonymous_client2.py
+uv run examples/anonymous_client2.py --base-url http://localhost:62478 --message "Hello"
+```
+
+This example defaults to `http://localhost:62478`, the same loan message, and a
+300-second timeout (`--timeout`). Inline uv dependency metadata installs the SDK
+in an isolated script environment without changing the proxy's dependencies.
+The first run requires access to PyPI. For an existing Python environment, install
+`a2a-sdk>=1.1.1,<2` and `httpx>=0.28.1,<1` before running it with `python`.
+
+SDK-specific tests are optional in the base environment. Run them with:
+
+```powershell
+uv run --with "a2a-sdk>=1.1.1,<2" python -m pytest -q tests/test_anonymous_client2.py
+```
+
+### Other Client Options
+
 For the alternate port:
 
 ```powershell

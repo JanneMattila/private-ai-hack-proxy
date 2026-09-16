@@ -28,3 +28,11 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "microsoft-package-feed"
+url = "https://packagefeedproxy.microsoft.io/pypi/simple/"
+default = true
