@@ -1,0 +1,8 @@
+backend_a2a_url = "https://myaifoundry000010.services.ai.azure.com/api/projects/project01/agents/My-Sub03/endpoint/protocols/a2a"
+agent_card_path = "/agentCard/v1.0"
+token_scope = "https://ai.azure.com/.default"
+public_base_url = "http://localhost:8000"
+connect_timeout_seconds = 10
+read_timeout_seconds = 300
+startup_timeout_seconds = 120
+credential_process_timeout_seconds = 60
