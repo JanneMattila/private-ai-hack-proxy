@@ -1,7 +1,7 @@
 #Requires -Version 7.2
 [CmdletBinding()]
 param(
-    [string] $BaseUrl = 'http://localhost:8000',
+    [string] $BaseUrl = 'http://localhost:62478',
     [string] $Message = 'I need a loan of 250,000 euros to buy a 160-square-metre house in Espoo, Finland. What is your offer?',
     [string] $ContextId,
     [string] $TaskId,

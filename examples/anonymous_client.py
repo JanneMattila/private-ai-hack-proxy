@@ -19,7 +19,7 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 def main():
     parser = argparse.ArgumentParser(description="Send an anonymous A2A message")
-    parser.add_argument("--base-url", default="http://localhost:8000")
+    parser.add_argument("--base-url", default="http://localhost:62478")
     parser.add_argument("--message", default=DEFAULT_MESSAGE)
     parser.add_argument("--timeout", type=float, default=300)
     arguments = parser.parse_args()
